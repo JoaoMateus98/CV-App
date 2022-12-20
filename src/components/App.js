@@ -44,7 +44,7 @@ class App extends React.Component {
         <GeneralInfo getGIStateProps={this.getGIStateProps} />
         <Education />
         <Professional />
-        <Profile />
+        <Profile GeneralInfo={this.state.GeneralInfo} />
       </div>
     );
   }
