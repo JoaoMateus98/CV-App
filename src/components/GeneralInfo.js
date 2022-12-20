@@ -37,7 +37,7 @@ class GeneralInfo extends React.Component {
   handleSubmit = (e) => {
     // TODO: should pass all state properties back to app
     const GIState = this.state;
-    this.props.handleGeneralInfoUpdate(e, GIState);
+    this.props.getGIStateProps(e, GIState);
     this.clearFields();
   };
 

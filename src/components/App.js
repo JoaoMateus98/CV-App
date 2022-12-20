@@ -18,22 +18,30 @@ class App extends React.Component {
     };
   }
 
-  handleGeneralInfoUpdate = (e, GIState) => {
+  getGIStateProps = (e, GIState) => {
     /* TODO: should grab GI State and update this.state.GeneralInfo to 
     then be passed to the profile component */
 
     const { name, email, phone } = GIState;
 
     e.preventDefault();
-    console.log("hello: ", name);
-    console.log("your email is: ", email);
-    console.log("your phone is: ", phone);
+    this.handleGIStateUpdate(name, email, phone);
+  };
+
+  handleGIStateUpdate = (newName, newEmail, newPhone) => {
+    this.setState({
+      GeneralInfo: {
+        name: newName,
+        email: newEmail,
+        phone: newPhone,
+      },
+    });
   };
 
   render() {
     return (
       <div className="main-container">
-        <GeneralInfo handleGeneralInfoUpdate={this.handleGeneralInfoUpdate} />
+        <GeneralInfo getGIStateProps={this.getGIStateProps} />
         <Education />
         <Professional />
         <Profile />
