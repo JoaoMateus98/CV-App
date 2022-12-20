@@ -6,8 +6,24 @@ class Profile extends React.Component {
 
     return (
       <div>
-        <p>Profile placeholder</p>
-        <p>your name is: {name}</p>
+        <p>
+          My name: {name}{" "}
+          <button onClick={() => this.props.handleEdits("GI", "name")}>
+            Edit
+          </button>{" "}
+        </p>
+        <p>
+          My Email: {email}{" "}
+          <button onClick={() => this.props.handleEdits("GI", "email")}>
+            Edit
+          </button>
+        </p>
+        <p>
+          My Phone: {phone}{" "}
+          <button onClick={() => this.props.handleEdits("GI", "phone")}>
+            Edit
+          </button>
+        </p>
       </div>
     );
   }
