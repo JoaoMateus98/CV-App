@@ -18,9 +18,16 @@ class App extends React.Component {
     };
   }
 
-  handleGeneralInfoUpdate = (e, name) => {
+  handleGeneralInfoUpdate = (e, GIState) => {
+    /* TODO: should grab GI State and update this.state.GeneralInfo to 
+    then be passed to the profile component */
+
+    const { name, email, phone } = GIState;
+
     e.preventDefault();
-    console.log("hello", name);
+    console.log("hello: ", name);
+    console.log("your email is: ", email);
+    console.log("your phone is: ", phone);
   };
 
   render() {

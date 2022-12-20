@@ -13,8 +13,6 @@ class GeneralInfo extends React.Component {
   }
 
   handleChange = (e) => {
-    // TODO: update the state properties
-
     switch (e.target.id) {
       case "name":
         this.setState({
@@ -36,9 +34,19 @@ class GeneralInfo extends React.Component {
     }
   };
 
-  handleSubmit = (e, name) => {
+  handleSubmit = (e) => {
     // TODO: should pass all state properties back to app
-    this.props.handleGeneralInfoUpdate(e, name);
+    const GIState = this.state;
+    this.props.handleGeneralInfoUpdate(e, GIState);
+    this.clearFields();
+  };
+
+  clearFields = () => {
+    this.setState({
+      name: "",
+      email: "",
+      phone: "",
+    });
   };
 
   render() {
@@ -59,7 +67,7 @@ class GeneralInfo extends React.Component {
           <input
             type={"email"}
             id="email"
-            placeholder="Enter Email Here"
+            placeholder="your@email.com"
             onChange={this.handleChange}
             value={this.state.email}
           ></input>
