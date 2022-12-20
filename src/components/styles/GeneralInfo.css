@@ -1,0 +1,9 @@
+.general-main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.divider {
+  margin: 1em;
+}
