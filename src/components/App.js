@@ -39,15 +39,25 @@ class App extends React.Component {
   };
 
   handleEdits = (componentToEdit, fieldID) => {
-    /* this needs to grab the value to edit from profile.js. 
-    send the value to GI or other component and edit */
-    console.log(componentToEdit, fieldID);
+    // TODO: Handle Edits
+    switch (componentToEdit) {
+      case "GI":
+        this.setGIStateProp(fieldID);
+        break;
+    }
+  };
+
+  setGIStateProp = (fieldID) => {
+    return fieldID;
   };
 
   render() {
     return (
       <div className="main-container">
-        <GeneralInfo getGIStateProps={this.getGIStateProps} />
+        <GeneralInfo
+          getGIStateProps={this.getGIStateProps}
+          setGIStateProp={this.setGIStateProp}
+        />
         <Education />
         <Professional />
         <Profile

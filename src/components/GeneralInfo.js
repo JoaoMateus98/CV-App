@@ -50,6 +50,7 @@ class GeneralInfo extends React.Component {
   };
 
   render() {
+
     return (
       <form className="general-main-container" onSubmit={this.handleSubmit}>
         <div className="divider">

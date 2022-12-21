@@ -10,7 +10,7 @@ class Profile extends React.Component {
           My name: {name}{" "}
           <button onClick={() => this.props.handleEdits("GI", "name")}>
             Edit
-          </button>{" "}
+          </button>
         </p>
         <p>
           My Email: {email}{" "}
