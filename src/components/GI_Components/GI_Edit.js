@@ -1,6 +1,7 @@
 import React from "react";
-import handleSubmitFunc from "../../helperFunctions/handleSubmit";
+import handleEditModeFun from "../../helperFunctions/handleEditMode";
 import SubmitButton from "../HelperComponents/SubmitButton";
+import updateGIState from "../../helperFunctions/updateGIState";
 
 class GIEdit extends React.Component {
   render() {
@@ -8,7 +9,7 @@ class GIEdit extends React.Component {
     const { name, email, phone } = this.props.GI_MetaInfo;
 
     return (
-      <form onSubmit={() => handleSubmitFunc(context)}>
+      <form onSubmit={() => handleEditModeFun(context, false)}>
         <label htmlFor="name-field">Name:</label>
         <input
           id="name-field"
@@ -16,7 +17,7 @@ class GIEdit extends React.Component {
           placeholder={"Enter Name Here"}
           value={name}
           onChange={(event) =>
-            context.setState({ GI_MetaInfo: { name: event.target.value } })
+            updateGIState(context, "name", event.target.value)
           }
         />
         <label htmlFor="email-field">Email:</label>
@@ -25,6 +26,9 @@ class GIEdit extends React.Component {
           type={"email"}
           placeholder={"Enter Email Here"}
           value={email}
+          onChange={(event) =>
+            updateGIState(context, "email", event.target.value)
+          }
         />
         <label htmlFor="phone-field">Phone:</label>
         <input
@@ -32,6 +36,9 @@ class GIEdit extends React.Component {
           type={"tel"}
           placeholder={"Enter Phone Here"}
           value={phone}
+          onChange={(event) =>
+            updateGIState(context, "phone", event.target.value)
+          }
         />
         <SubmitButton />
       </form>
