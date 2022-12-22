@@ -4,7 +4,11 @@ import React from "react";
 class EditButton extends React.Component {
   render() {
     return (
-      <button onClick={() => this.props.handleEditMode(true)}>Edit</button>
+      <button
+        onClick={() => this.props.handleEditMode(this.props.context, true)}
+      >
+        Edit
+      </button>
     );
   }
 }
