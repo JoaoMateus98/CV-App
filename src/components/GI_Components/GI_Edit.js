@@ -4,7 +4,7 @@ import SubmitButton from "../HelperComponents/SubmitButton";
 
 class GIEdit extends React.Component {
   render() {
-    const { context } = this.props.context;
+    const context = this.props.context;
     const { name, email, phone } = this.props.GI_MetaInfo;
 
     return (
@@ -15,6 +15,9 @@ class GIEdit extends React.Component {
           type={"text"}
           placeholder={"Enter Name Here"}
           value={name}
+          onChange={(event) =>
+            context.setState({ GI_MetaInfo: { name: event.target.value } })
+          }
         />
         <label htmlFor="email-field">Email:</label>
         <input
