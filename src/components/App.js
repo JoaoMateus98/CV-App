@@ -1,11 +1,11 @@
 import React from "react";
-import GI_Display from "./GI_Components/GI_Display";
+import GI_Main from "./GI_Components/GI_Main";
 
 class App extends React.Component {
   render() {
     return (
       <div className="main-app-container">
-        <GI_Display />
+        <GI_Main />
       </div>
     );
   }
