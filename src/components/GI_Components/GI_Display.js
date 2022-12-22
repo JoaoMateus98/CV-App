@@ -2,7 +2,7 @@ import React from "react";
 import DisplayItem from "../HelperComponents/DisplayItem";
 import EditButton from "../HelperComponents/EditButton";
 
-class GI_Display extends React.Component {
+class GIDisplay extends React.Component {
   render() {
     const { name, email, phone, context, openEditMode } = this.props;
     return (
@@ -16,4 +16,4 @@ class GI_Display extends React.Component {
   }
 }
 
-export default GI_Display;
+export default GIDisplay;

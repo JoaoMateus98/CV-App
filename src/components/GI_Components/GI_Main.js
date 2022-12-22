@@ -1,9 +1,9 @@
 import React from "react";
-import GI_Display from "./GI_Display";
-import Gi_Edit from "./GI_Edit";
+import GIDisplay from "./GI_Display";
+import GIEdit from "./GI_Edit";
 import openEditModeFun from "../../helperFunctions/openEditMode";
 
-class GI_Main extends React.Component {
+class GIMain extends React.Component {
   constructor(props) {
     super(props);
 
@@ -23,10 +23,10 @@ class GI_Main extends React.Component {
     const thisComponent = this; // a little more sense for me
 
     if (EditMode) {
-      return <Gi_Edit context={thisComponent} />;
+      return <GIEdit context={thisComponent} />;
     } else {
       return (
-        <GI_Display
+        <GIDisplay
           name={name}
           email={email}
           phone={phone}
@@ -38,4 +38,4 @@ class GI_Main extends React.Component {
   }
 }
 
-export default GI_Main;
+export default GIMain;

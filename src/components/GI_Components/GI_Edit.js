@@ -2,7 +2,7 @@ import React from "react";
 import handleSubmitFunc from "../../helperFunctions/handleSubmit";
 import SubmitButton from "../HelperComponents/SubmitButton";
 
-class Gi_Edit extends React.Component {
+class GIEdit extends React.Component {
   render() {
     const { context } = this.props;
 
@@ -15,4 +15,4 @@ class Gi_Edit extends React.Component {
   }
 }
 
-export default Gi_Edit;
+export default GIEdit;
