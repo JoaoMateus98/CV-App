@@ -1,8 +1,17 @@
 import React from "react";
+import handleSubmitFunc from "../../helperFunctions/handleSubmit";
+import SubmitButton from "../HelperComponents/SubmitButton";
 
 class Gi_Edit extends React.Component {
   render() {
-    return <div>Edit Window Place Holder</div>;
+    const { context } = this.props;
+
+    return (
+      <form onSubmit={() => handleSubmitFunc(context)}>
+        <div>Edit window placeholder</div>
+        <SubmitButton />
+      </form>
+    );
   }
 }
 

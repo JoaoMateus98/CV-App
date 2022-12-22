@@ -20,16 +20,17 @@ class GI_Main extends React.Component {
   render() {
     const { name, email, phone } = this.state.GI_MetaInfo;
     const EditMode = this.state.EditMode;
+    const thisComponent = this; // a little more sense for me
 
     if (EditMode) {
-      return <Gi_Edit />;
+      return <Gi_Edit context={thisComponent} />;
     } else {
       return (
         <GI_Display
           name={name}
           email={email}
           phone={phone}
-          context={this}
+          context={thisComponent}
           openEditMode={openEditModeFun}
         />
       );
