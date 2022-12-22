@@ -17,22 +17,23 @@ class GI_Main extends React.Component {
     };
   }
 
-  //TODO: create a function that sets the EditMode state true or false
-
   render() {
-    console.log(this.state.EditMode);
-
     const { name, email, phone } = this.state.GI_MetaInfo;
+    const EditMode = this.state.EditMode;
 
-    return (
-      <GI_Display
-        name={name}
-        email={email}
-        phone={phone}
-        context={this}
-        handleEditMode={handleEditModeFunc}
-      />
-    );
+    if (EditMode) {
+      return <Gi_Edit />;
+    } else {
+      return (
+        <GI_Display
+          name={name}
+          email={email}
+          phone={phone}
+          context={this}
+          handleEditMode={handleEditModeFunc}
+        />
+      );
+    }
   }
 }
 

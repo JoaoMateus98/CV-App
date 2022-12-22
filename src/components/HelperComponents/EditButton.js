@@ -1,6 +1,6 @@
 import React from "react";
 
-// turns on edit mode
+// sets handleEditMode boolean from passed class to true
 class EditButton extends React.Component {
   render() {
     return (
