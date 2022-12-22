@@ -4,7 +4,7 @@ import EditButton from "../HelperComponents/EditButton";
 
 class GIDisplay extends React.Component {
   render() {
-    const { name, email, phone, context, openEditMode } = this.props;
+    const { context, name, email, phone, openEditMode } = this.props;
     return (
       <div>
         <DisplayItem category={"Name"} value={name} />
