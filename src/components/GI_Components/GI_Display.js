@@ -4,13 +4,13 @@ import EditButton from "../HelperComponents/EditButton";
 
 class GI_Display extends React.Component {
   render() {
-    const { name, email, phone, context, handleEditMode } = this.props;
+    const { name, email, phone, context, openEditMode } = this.props;
     return (
       <div>
         <DisplayItem category={"Name"} value={name} />
         <DisplayItem category={"Email"} value={email} />
         <DisplayItem category={"Phone"} value={phone} />
-        <EditButton context={context} handleEditMode={handleEditMode} />
+        <EditButton context={context} openEditMode={openEditMode} />
       </div>
     );
   }

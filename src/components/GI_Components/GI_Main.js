@@ -1,7 +1,7 @@
 import React from "react";
 import GI_Display from "./GI_Display";
 import Gi_Edit from "./GI_Edit";
-import handleEditModeFunc from "../../helperFunctions/handleEditMode";
+import openEditModeFun from "../../helperFunctions/openEditMode";
 
 class GI_Main extends React.Component {
   constructor(props) {
@@ -30,7 +30,7 @@ class GI_Main extends React.Component {
           email={email}
           phone={phone}
           context={this}
-          handleEditMode={handleEditModeFunc}
+          openEditMode={openEditModeFun}
         />
       );
     }
