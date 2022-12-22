@@ -35,14 +35,13 @@ class InputItem extends React.Component {
   }
 
   render() {
-    const containerID = this.props.containerID;
     const inputType = this.props.inputType;
     const inputTypeCapitalized = this.capitalizeFirstLetter(inputType);
     const context = this.props.context;
-    const savedValueState = this.props.savedValueState;
+    const savedValueState = context.state[`${inputType}`];
 
     return (
-      <div id={containerID}>
+      <div id={`GI-Edit-container-${inputType}`}>
         <label htmlFor={`${inputType}-field`}>{inputTypeCapitalized}:</label>
         <input
           id={`${inputType}-field`}
