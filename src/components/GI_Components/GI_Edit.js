@@ -1,12 +1,13 @@
 import React from "react";
 import handleEditModeFun from "../../helperFunctions/handleEditMode";
 import SubmitButton from "../HelperComponents/SubmitButton";
-import updateGIState from "../../helperFunctions/updateGIState";
 
 class GIEdit extends React.Component {
   render() {
+    const name = this.props.name;
+    const email = this.props.email;
+    const phone = this.props.phone;
     const context = this.props.context;
-    const { name, email, phone } = this.props.GI_MetaInfo;
 
     return (
       <form onSubmit={() => handleEditModeFun(context, false)}>
@@ -16,9 +17,7 @@ class GIEdit extends React.Component {
           type={"text"}
           placeholder={"Enter Name Here"}
           value={name}
-          onChange={(event) =>
-            updateGIState(context, "name", event.target.value)
-          }
+          onChange={(event) => context.setState({ name: event.target.value })}
         />
         <label htmlFor="email-field">Email:</label>
         <input
@@ -26,9 +25,7 @@ class GIEdit extends React.Component {
           type={"email"}
           placeholder={"Enter Email Here"}
           value={email}
-          onChange={(event) =>
-            updateGIState(context, "email", event.target.value)
-          }
+          onChange={(event) => context.setState({ email: event.target.value })}
         />
         <label htmlFor="phone-field">Phone:</label>
         <input
@@ -36,9 +33,7 @@ class GIEdit extends React.Component {
           type={"tel"}
           placeholder={"Enter Phone Here"}
           value={phone}
-          onChange={(event) =>
-            updateGIState(context, "phone", event.target.value)
-          }
+          onChange={(event) => context.setState({ phone: event.target.value })}
         />
         <SubmitButton />
       </form>

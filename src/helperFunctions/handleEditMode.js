@@ -2,6 +2,6 @@
 
 export default function handleEditModeFun(context, switchMode) {
   switchMode
-    ? context.setState({ EditMode: true })
-    : context.setState({ EditMode: false });
+    ? context.setState({ editMode: true })
+    : context.setState({ editMode: false });
 }

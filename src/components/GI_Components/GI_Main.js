@@ -8,22 +8,21 @@ class GIMain extends React.Component {
     super(props);
 
     this.state = {
-      GI_MetaInfo: {
-        name: "N/A",
-        email: "N/A",
-        phone: "N/A",
-      },
-      EditMode: false,
+      name: "N/A",
+      email: "N/A",
+      phone: "N/A",
+      editMode: false,
     };
   }
 
   render() {
-    const { name, email, phone } = this.state.GI_MetaInfo;
-    const GI_MetaInfo = this.state.GI_MetaInfo;
-    const EditMode = this.state.EditMode;
+    const name = this.state.name;
+    const email = this.state.email;
+    const phone = this.state.phone;
+    const editMode = this.state.editMode;
 
-    if (EditMode) {
-      return <GIEdit context={this} GI_MetaInfo={GI_MetaInfo} />;
+    if (editMode) {
+      return <GIEdit context={this} name={name} email={email} phone={phone} />;
     } else {
       return (
         <GIDisplay
