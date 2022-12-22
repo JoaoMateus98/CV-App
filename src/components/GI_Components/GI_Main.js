@@ -16,7 +16,9 @@ class GI_Main extends React.Component {
     };
   }
   render() {
-    return <GI_Display />;
+    const { name, email, phone } = this.state.GI_MetaInfo;
+
+    return <GI_Display name={name} email={email} phone={phone} />;
   }
 }
 
