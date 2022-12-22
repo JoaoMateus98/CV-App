@@ -2,7 +2,8 @@ import React from "react";
 
 class SubmitButton extends React.Component {
   render() {
-    return <input type={"submit"} value={"Submit"} />;
+    const buttonID = this.props.buttonID;
+    return <input id={buttonID} type={"submit"} value={"Submit"} />;
   }
 }
 

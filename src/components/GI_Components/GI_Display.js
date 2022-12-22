@@ -10,7 +10,11 @@ class GIDisplay extends React.Component {
         <DisplayItem category={"Name"} value={name} />
         <DisplayItem category={"Email"} value={email} />
         <DisplayItem category={"Phone"} value={phone} />
-        <EditButton context={context} handleEditMode={handleEditMode} />
+        <EditButton
+          buttonID="GI-Edit-edit-button"
+          context={context}
+          handleEditMode={handleEditMode}
+        />
       </div>
     );
   }
