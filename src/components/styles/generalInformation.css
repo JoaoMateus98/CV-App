@@ -6,6 +6,18 @@
 .GI_Display-main-container > * {
   margin-bottom: 12px;
 }
+.GI-Edit-input-container {
+  display: flex;
+  justify-content: space-between;
+}
+.GI-Display-container {
+  display: flex;
+}
+.GI-Display-container > *,
+.GI-Edit-input-container > * {
+  margin-right: 6px;
+}
+
 p {
   margin: 0;
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import DisplayItem from "../helperComponents/DisplayItem";
+import GIDisplayItem from "./GI_HelperComponents/GI_DisplayItem";
 import EditButton from "../helperComponents/EditButton";
 
 class GIDisplay extends React.Component {
@@ -7,9 +7,9 @@ class GIDisplay extends React.Component {
     const { context, name, email, phone, handleEditMode } = this.props;
     return (
       <div className="GI_Display-main-container">
-        <DisplayItem category={"Name"} value={name} />
-        <DisplayItem category={"Email"} value={email} />
-        <DisplayItem category={"Phone"} value={phone} />
+        <GIDisplayItem category={"Name"} value={name} />
+        <GIDisplayItem category={"Email"} value={email} />
+        <GIDisplayItem category={"Phone"} value={phone} />
         <EditButton context={context} handleEditMode={handleEditMode} />
       </div>
     );

@@ -1,18 +1,39 @@
+:root {
+  --test-border: 2px solid red;
+  /* color theme */
+  --nice-blue: #05486b;
+  --nice-dark-green: #379683;
+  --nice-green: #5cdb95;
+  --nice-light-green: #8ee4af;
+  --nice-cream: #edf5e1;
+}
 #main-app-container {
   display: flex;
   min-height: 100%;
 }
 #left-app-container {
   flex: 1;
-  padding: 12px 0 0 12px;
+  padding: 12px 12px 0 12px;
+  border: var(--test-border);
 }
 #right-app-container {
   flex: 5;
   padding-left: 12px;
   display: flex;
   flex-direction: column;
+  border: var(--test-border);
 }
 .edit-button {
+  align-self: flex-end;
+  width: fit-content;
+  margin-right: 6px;
 }
 .submit-button {
+  align-self: flex-end;
+  width: fit-content;
+  margin-right: 6px;
+  background-color: rgb(8, 28, 125);
+  border-radius: 8px;
+  text-transform: uppercase;
+  color: #fff;
 }

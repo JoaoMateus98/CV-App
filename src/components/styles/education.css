@@ -1,4 +1,5 @@
 #education-main-container {
   flex: 3;
   padding-top: 12px;
+  border: var(--test-border);
 }
