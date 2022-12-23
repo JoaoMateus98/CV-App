@@ -4,7 +4,7 @@ import React from "react";
 // fully css ready
 // Very Nice!
 
-class InputItem extends React.Component {
+class GIInputItem extends React.Component {
   capitalizeFirstLetter = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
   };
@@ -27,30 +27,19 @@ class InputItem extends React.Component {
     }
   };
 
-  convertType(inputType) {
-    switch (inputType) {
-      case "name":
-        return "text";
-      case "phone":
-        return "tel";
-      default:
-        return inputType;
-    }
-  }
-
   render() {
-    const className = this.props.inputID;
     const inputType = this.props.inputType;
     const inputTypeCapitalized = this.capitalizeFirstLetter(inputType);
+    const type = this.props.type;
     const context = this.props.context;
     const savedValueState = context.state[`${inputType}`];
 
     return (
-      <div className={className}>
+      <div className={"GI-Edit-container"}>
         <label htmlFor={`${inputType}-field`}>{inputTypeCapitalized}:</label>
         <input
           id={`${inputType}-field`}
-          type={this.convertType(inputType)}
+          type={type}
           placeholder={`Enter ${inputTypeCapitalized} Here`}
           value={savedValueState}
           onChange={(event) =>
@@ -62,4 +51,4 @@ class InputItem extends React.Component {
   }
 }
 
-export default InputItem;
+export default GIInputItem;
