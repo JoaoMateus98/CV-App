@@ -8,7 +8,7 @@ class EditButton extends React.Component {
 
     return (
       <button
-        id={buttonID}
+        className="edit-button"
         onClick={() => this.props.handleEditMode(context, true)}
       >
         Edit
