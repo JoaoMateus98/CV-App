@@ -18,6 +18,12 @@
   margin-right: 6px;
 }
 
+.GI-Edit-input-container > input {
+  background-color: var(--nice-green);
+  border: 2px solid var(--nice-blue);
+  border-radius: 8px;
+}
+
 p {
   margin: 0;
 }
