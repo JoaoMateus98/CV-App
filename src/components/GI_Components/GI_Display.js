@@ -1,20 +1,16 @@
 import React from "react";
-import DisplayItem from "../HelperComponents/DisplayItem";
-import EditButton from "../HelperComponents/EditButton";
+import GIDisplayItem from "./GI_HelperComponents/GI_DisplayItem";
+import EditButton from "../helperComponents/EditButton";
 
 class GIDisplay extends React.Component {
   render() {
     const { context, name, email, phone, handleEditMode } = this.props;
     return (
-      <div>
-        <DisplayItem category={"Name"} value={name} />
-        <DisplayItem category={"Email"} value={email} />
-        <DisplayItem category={"Phone"} value={phone} />
-        <EditButton
-          buttonID="GI-Edit-edit-button"
-          context={context}
-          handleEditMode={handleEditMode}
-        />
+      <div className="GI_Display-main-container">
+        <GIDisplayItem category={"Name"} value={name} />
+        <GIDisplayItem category={"Email"} value={email} />
+        <GIDisplayItem category={"Phone"} value={phone} />
+        <EditButton context={context} handleEditMode={handleEditMode} />
       </div>
     );
   }

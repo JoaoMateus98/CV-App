@@ -1,0 +1,29 @@
+.GI_Display-main-container {
+  display: flex;
+  flex-direction: column;
+  min-width: max-content;
+}
+.GI_Display-main-container > * {
+  margin-bottom: 12px;
+}
+.GI-Edit-input-container {
+  display: flex;
+  justify-content: space-between;
+}
+.GI-Display-container {
+  display: flex;
+}
+.GI-Display-container > *,
+.GI-Edit-input-container > * {
+  margin-right: 6px;
+}
+
+.GI-Edit-input-container > input {
+  background-color: var(--nice-green);
+  border: 2px solid var(--nice-blue);
+  border-radius: 8px;
+}
+
+p {
+  margin: 0;
+}
