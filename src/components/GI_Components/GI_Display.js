@@ -1,6 +1,7 @@
 import React from "react";
-import DisplayItem from "../HelperComponents/DisplayItem";
-import EditButton from "../HelperComponents/EditButton";
+import DisplayItem from "../helperComponents/DisplayItem";
+import EditButton from "../helperComponents/EditButton";
+import "../styles/GI_Display.css";
 
 class GIDisplay extends React.Component {
   render() {

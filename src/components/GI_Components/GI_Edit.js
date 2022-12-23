@@ -1,5 +1,5 @@
 import React from "react";
-import SubmitButton from "../HelperComponents/SubmitButton";
+import SubmitButton from "../helperComponents/SubmitButton";
 import GIInputItem from "./GI_HelperComponents/GI_InputItem";
 import handleEditModeFun from "../../helperFunctions/handleEditMode";
 
