@@ -1,0 +1,11 @@
+.GI_Display-main-container {
+  display: flex;
+  flex-direction: column;
+  min-width: max-content;
+}
+.GI_Display-main-container > * {
+  margin-bottom: 12px;
+}
+p {
+  margin: 0;
+}

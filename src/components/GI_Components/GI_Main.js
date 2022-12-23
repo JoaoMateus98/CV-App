@@ -2,7 +2,7 @@ import React from "react";
 import GIDisplay from "./GI_Display";
 import GIEdit from "./GI_Edit";
 import handleEditModeFun from "../../helperFunctions/handleEditMode";
-import "../styles/GI_Main.css";
+import "../styles/generalInformation.css";
 
 class GIMain extends React.Component {
   constructor(props) {

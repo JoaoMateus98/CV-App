@@ -8,11 +8,14 @@ class GIEdit extends React.Component {
     const context = this.props.context;
 
     return (
-      <form onSubmit={() => handleEditModeFun(context, false)}>
+      <form
+        className="GI_Display-main-container"
+        onSubmit={() => handleEditModeFun(context, false)}
+      >
         <GIInputItem inputType="name" type="text" context={context} />
         <GIInputItem inputType="email" type="email" context={context} />
         <GIInputItem inputType="phone" type="tel" context={context} />
-        <SubmitButton buttonID="GI-Edit-submit-button" />
+        <SubmitButton />
       </form>
     );
   }

@@ -6,15 +6,11 @@ class GIDisplay extends React.Component {
   render() {
     const { context, name, email, phone, handleEditMode } = this.props;
     return (
-      <div>
+      <div className="GI_Display-main-container">
         <DisplayItem category={"Name"} value={name} />
         <DisplayItem category={"Email"} value={email} />
         <DisplayItem category={"Phone"} value={phone} />
-        <EditButton
-          buttonID="GI-Edit-edit-button"
-          context={context}
-          handleEditMode={handleEditMode}
-        />
+        <EditButton context={context} handleEditMode={handleEditMode} />
       </div>
     );
   }
