@@ -4,7 +4,7 @@ import React from "react";
 // fully css ready
 // Very Nice!
 
-class InputItem extends React.Component {
+class GIInputItem extends React.Component {
   capitalizeFirstLetter = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
   };
@@ -27,20 +27,10 @@ class InputItem extends React.Component {
     }
   };
 
-  convertType(inputType) {
-    switch (inputType) {
-      case "name":
-        return "text";
-      case "phone":
-        return "tel";
-      default:
-        return inputType;
-    }
-  }
-
   render() {
-    const { className, inputType, context } = this.props;
+    const inputType = this.props.inputType;
     const inputTypeCapitalized = this.capitalizeFirstLetter(inputType);
+    const context = this.props.context;
     const savedValueState = context.state[`${inputType}`];
 
     return (
