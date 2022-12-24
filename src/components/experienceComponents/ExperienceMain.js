@@ -9,11 +9,19 @@ class ExperienceMain extends React.Component {
     super(props);
 
     this.state = {
-      editMode: true, // TODO: change to default false
+      company: "N/A",
+      position: "N/A",
+      description: "N/A",
+      period: {
+        start: "N/A",
+        end: "N/A",
+      },
+      editMode: false,
     };
   }
 
   render() {
+    console.log(this.state.company);
     const editMode = this.state.editMode;
 
     if (editMode) {
