@@ -11,6 +11,7 @@ class InputItem extends React.Component {
 
   handleStateChange = (context, inputType, value) => {
     switch (inputType) {
+      // general information
       case "name":
         context.setState({ name: value });
         break;
@@ -19,6 +20,13 @@ class InputItem extends React.Component {
         break;
       case "phone":
         context.setState({ phone: value });
+        break;
+      // experience
+      case "company":
+        context.setState({ company: value });
+        break;
+      case "position":
+        context.setState({ position: value });
         break;
 
       default:
