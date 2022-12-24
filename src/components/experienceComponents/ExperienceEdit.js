@@ -1,6 +1,6 @@
 import React from "react";
 import SubmitButton from "../helperComponents/SubmitButton";
-import ExperienceInputItem from "./experienceHelperComponents/experienceInputItem";
+import InputItem from "../helperComponents/InputItem";
 import handleEditModeFun from "../../helperFunctions/handleEditMode";
 
 class ExperienceEdit extends React.Component {
@@ -12,6 +12,7 @@ class ExperienceEdit extends React.Component {
         className="experience-main-container"
         onSubmit={() => handleEditModeFun(context, false)}
       >
+        <InputItem inputType="company" type="text" context={context} />
         <SubmitButton />
       </form>
     );

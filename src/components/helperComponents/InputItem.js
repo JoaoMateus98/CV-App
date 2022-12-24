@@ -4,7 +4,7 @@ import React from "react";
 // fully css ready
 // Very Nice!
 
-class GIInputItem extends React.Component {
+class InputItem extends React.Component {
   capitalizeFirstLetter = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
   };
@@ -51,4 +51,4 @@ class GIInputItem extends React.Component {
   }
 }
 
-export default GIInputItem;
+export default InputItem;
