@@ -1,7 +1,8 @@
 import React from "react";
-import "../styles/experience.css";
 import ExperienceDisplay from "./ExperienceDisplay";
 import ExperienceEdit from "./ExperienceEdit";
+import handleEditModeFun from "../../helperFunctions/handleEditMode";
+import "../styles/experience.css";
 
 class ExperienceMain extends React.Component {
   constructor(props) {
@@ -18,7 +19,9 @@ class ExperienceMain extends React.Component {
     if (editMode) {
       return <ExperienceEdit context={this} />;
     } else {
-      return <ExperienceDisplay />;
+      return (
+        <ExperienceDisplay context={this} handleEditMode={handleEditModeFun} />
+      );
     }
   }
 }

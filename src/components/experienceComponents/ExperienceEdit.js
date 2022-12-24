@@ -9,7 +9,7 @@ class ExperienceEdit extends React.Component {
 
     return (
       <form
-        className="experience-container"
+        className="experience-main-container"
         onSubmit={() => handleEditModeFun(context, false)}
       >
         <SubmitButton />

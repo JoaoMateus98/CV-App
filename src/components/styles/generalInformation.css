@@ -1,9 +1,9 @@
-.GI_Display-main-container {
+.GI_main-container {
   display: flex;
   flex-direction: column;
   min-width: max-content;
 }
-.GI_Display-main-container > * {
+.GI_main-container > * {
   margin-bottom: 12px;
 }
 .GI-Edit-input-container {

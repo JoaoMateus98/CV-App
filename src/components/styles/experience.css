@@ -1,5 +1,7 @@
-#experience-main-container {
+.experience-main-container {
   flex: 1;
   padding: 12px 0 0 12px;
   border: var(--test-border);
+  display: flex;
+  flex-direction: column;
 }

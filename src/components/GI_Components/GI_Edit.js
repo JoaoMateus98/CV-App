@@ -9,7 +9,7 @@ class GIEdit extends React.Component {
 
     return (
       <form
-        className="GI_Display-main-container"
+        className="GI_main-container"
         onSubmit={() => handleEditModeFun(context, false)}
       >
         <GIInputItem inputType="name" type="text" context={context} />

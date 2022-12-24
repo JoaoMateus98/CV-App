@@ -25,18 +25,9 @@
   flex-direction: column;
   border: var(--test-border);
 }
-.edit-button {
-  align-self: flex-end;
-  padding: 4px 12px;
-  width: fit-content;
-  margin-right: 6px;
-  background-color: var(--nice-blue);
-  border: 0;
-  border-radius: 8px;
-  text-transform: uppercase;
-  color: white;
-}
-.submit-button {
+.edit-button,
+.submit-button,
+.add-button {
   align-self: flex-end;
   padding: 4px 12px;
   width: fit-content;
