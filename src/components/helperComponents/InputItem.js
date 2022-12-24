@@ -35,7 +35,7 @@ class InputItem extends React.Component {
     const savedValueState = context.state[`${inputType}`];
 
     return (
-      <div className={"GI-Edit-input-container"}>
+      <div className={"input-container"}>
         <label htmlFor={`${inputType}-field`}>{inputTypeCapitalized}:</label>
         <input
           id={`${inputType}-field`}

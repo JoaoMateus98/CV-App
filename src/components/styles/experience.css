@@ -1,7 +1,12 @@
 .experience-main-container {
   flex: 1;
-  padding: 12px 0 0 12px;
+  padding: 12px;
   border: var(--test-border);
   display: flex;
   flex-direction: column;
+  gap: 16px;
+}
+
+.experience-main-container > .submit-button {
+  margin-top: auto;
 }

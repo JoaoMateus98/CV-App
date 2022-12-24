@@ -13,6 +13,7 @@ class ExperienceEdit extends React.Component {
         onSubmit={() => handleEditModeFun(context, false)}
       >
         <InputItem inputType="company" type="text" context={context} />
+        <InputItem inputType="position" type="text" context={context} />
         <SubmitButton />
       </form>
     );

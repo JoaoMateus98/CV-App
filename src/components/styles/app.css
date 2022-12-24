@@ -25,6 +25,19 @@
   flex-direction: column;
   border: var(--test-border);
 }
+.input-container {
+  display: flex;
+  justify-content: space-between;
+}
+.input-container > * {
+  margin-right: 6px;
+}
+.input-container > input {
+  background-color: var(--nice-green);
+  border: 2px solid var(--nice-blue);
+  border-radius: 8px;
+}
+
 .edit-button,
 .submit-button,
 .add-button {
