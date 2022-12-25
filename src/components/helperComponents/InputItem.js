@@ -1,9 +1,5 @@
 import React from "react";
 
-// return a label and input element with very little info passed to it
-// fully css ready
-// Very Nice!
-
 class InputItem extends React.Component {
   capitalizeFirstLetter = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
