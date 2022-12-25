@@ -20,7 +20,12 @@ class ExperienceEdit extends React.Component {
       >
         <InputItem inputType="company" type="text" context={context} />
         <InputItem inputType="position" type="text" context={context} />
-        <TextAreaItem inputType="description" />
+        <TextAreaItem
+          inputType="description"
+          rows="3"
+          cols="20"
+          context={context}
+        />
         <SubmitButton />
       </form>
     );

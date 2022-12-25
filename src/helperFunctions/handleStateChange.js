@@ -17,7 +17,9 @@ export default function handleStateChange(context, inputType, value) {
     case "position":
       context.setState({ position: value });
       break;
-
+    case "description":
+      context.setState({ description: value });
+      break;
     default:
       console.log("Invalid input type!!!");
       break;
