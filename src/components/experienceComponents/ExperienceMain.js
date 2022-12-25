@@ -1,6 +1,7 @@
 import React from "react";
-import ExperienceDisplay from "./ExperienceDisplay";
 import handleEditModeFun from "../../helperFunctions/handleEditMode";
+import ExperienceEdit from "./ExperienceEdit";
+import AddButton from "../helperComponents/AddButton";
 import "../styles/experience.css";
 
 class ExperienceMain extends React.Component {
@@ -8,20 +9,57 @@ class ExperienceMain extends React.Component {
     super(props);
 
     this.state = {
+      company: "N/A",
+      position: "N/A",
+      description: "N/A",
+      period: {
+        start: "N/A",
+        end: "N/A",
+      },
+      jobList: [],
       editMode: false,
     };
   }
 
-  render() {
-    const editMode = this.state.editMode;
+  createNewJob = () => {
+    const job = {
+      company: this.state.company,
+      position: this.state.position,
+      description: this.state.description,
+      period: {
+        start: this.state.period.start,
+        end: this.state.period.end,
+      },
+    };
 
-    return (
-      <ExperienceDisplay
-        contextMain={this}
-        handleEditMode={handleEditModeFun}
-        editMode={editMode}
-      />
-    );
+    return job;
+  };
+
+  createNewExperienceItemFun = () => {
+    const job = this.createNewJob();
+
+    this.setState({
+      jobList: this.state.jobList.concat(job),
+    });
+
+    console.log(this.state.jobList);
+  };
+
+  render() {
+    if (this.state.editMode) {
+      return (
+        <ExperienceEdit
+          context={this}
+          createNewExperienceItem={this.createNewExperienceItemFun}
+        />
+      );
+    } else {
+      return (
+        <div className="experience-main-container">
+          <AddButton contextMain={this} handleEditMode={handleEditModeFun} />
+        </div>
+      );
+    }
   }
 }
 

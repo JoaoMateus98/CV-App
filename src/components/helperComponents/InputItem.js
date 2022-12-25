@@ -36,10 +36,9 @@ class InputItem extends React.Component {
   };
 
   render() {
-    const inputType = this.props.inputType;
+    const { inputType, type, context } = this.props;
+
     const inputTypeCapitalized = this.capitalizeFirstLetter(inputType);
-    const type = this.props.type;
-    const context = this.props.context;
     const savedValueState = context.state[`${inputType}`];
 
     return (
