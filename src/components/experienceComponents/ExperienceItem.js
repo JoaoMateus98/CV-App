@@ -16,6 +16,12 @@ class ExperienceItem extends React.Component {
     });
   };
 
+  handleDelete = (context, jobObj) => {
+    context.setState({
+      jobList: context.state.jobList.filter((job) => job !== jobObj),
+    });
+  };
+
   render() {
     const context = this.props.context;
     const jobObj = this.props.jobObj;
@@ -41,14 +47,24 @@ class ExperienceItem extends React.Component {
           <p>End Date:</p>
           <p>{jobObj.period.end}</p>
         </div>
-        <button
-          className="edit-button job-field"
-          onClick={() => {
-            this.handleEdit(context, jobObj);
-          }}
-        >
-          Edit
-        </button>
+        <div className="job-buttons">
+          <button
+            className="edit-button job-field"
+            onClick={() => {
+              this.handleEdit(context, jobObj);
+            }}
+          >
+            Edit
+          </button>
+          <button
+            className="delete-button job-field"
+            onClick={() => {
+              this.handleDelete(context, jobObj);
+            }}
+          >
+            Delete
+          </button>
+        </div>
       </div>
     );
   }

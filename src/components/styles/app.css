@@ -40,7 +40,8 @@
 
 .edit-button,
 .submit-button,
-.add-button {
+.add-button,
+.delete-button {
   align-self: flex-end;
   padding: 4px 12px;
   width: fit-content;
@@ -50,4 +51,10 @@
   border-radius: 8px;
   text-transform: uppercase;
   color: white;
+  cursor: pointer;
+}
+
+.delete-button {
+  background-color: red;
+  margin-right: 0;
 }
