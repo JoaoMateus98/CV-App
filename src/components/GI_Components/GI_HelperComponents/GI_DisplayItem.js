@@ -6,8 +6,7 @@ class GIDisplayItem extends React.Component {
 
     return (
       <div className="GI-Display-container">
-        <p>{category}:</p>
-        <p>{value}</p>
+        <p id={category}>{value}</p>
       </div>
     );
   }

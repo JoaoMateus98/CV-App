@@ -27,26 +27,14 @@ class ExperienceItem extends React.Component {
     const jobObj = this.props.jobObj;
     return (
       <div className="job-container">
-        <div className="job-field">
-          <p>Company:</p>
-          <p>{jobObj.company}</p>
+        <div className="period">
+          <p>
+            {jobObj.period.start} - {jobObj.period.end}
+          </p>
         </div>
-        <div className="job-field">
-          <p>Position:</p>
-          <p>{jobObj.position}</p>
-        </div>
-        <div className="job-field">
-          <p>Description:</p>
-          <p>{jobObj.description}</p>
-        </div>
-        <div className="job-field">
-          <p>Start Date:</p>
-          <p>{jobObj.period.start}</p>
-        </div>
-        <div className="job-field">
-          <p>End Date:</p>
-          <p>{jobObj.period.end}</p>
-        </div>
+        <h1 className="position">{jobObj.position}</h1>
+        <p>{jobObj.company}</p>
+        <p className="description">{jobObj.description}</p>
         <div className="job-buttons">
           <button
             className="edit-button job-field"

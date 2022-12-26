@@ -12,7 +12,8 @@ class GIEdit extends React.Component {
         className="GI_main-container"
         onSubmit={() => handleEditModeFun(context, false)}
       >
-        <InputItem inputType="name" type="text" context={context} />
+        <InputItem inputType="firstName" type="text" context={context} />
+        <InputItem inputType="lastName" type="text" context={context} />
         <InputItem inputType="email" type="email" context={context} />
         <InputItem inputType="phone" type="tel" context={context} />
         <SubmitButton />

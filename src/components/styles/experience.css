@@ -1,6 +1,6 @@
 .experience-main-container {
   flex: 1;
-  padding: 12px;
+  padding: 12px 32px 12px 32px;
   border: var(--test-border);
   display: flex;
   flex-direction: column;
@@ -12,18 +12,37 @@
   margin-top: auto;
 }
 
+#experience-title {
+  font-size: 1.65rem;
+  font-weight: bolder;
+  margin: 0;
+  border-bottom: 2px solid black;
+}
+
 .job-container {
   width: 50%;
   display: flex;
   flex-direction: column;
 }
 
-.job-field {
-  display: flex;
-  justify-content: space-between;
-}
-
 .job-buttons {
   display: flex;
+  gap: 12px;
   justify-content: flex-end;
+}
+
+.period {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.position {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.description {
+  margin-top: 12px;
+  margin-bottom: 24px;
 }

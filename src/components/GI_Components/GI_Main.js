@@ -9,7 +9,8 @@ class GIMain extends React.Component {
     super(props);
 
     this.state = {
-      name: "",
+      firstName: "",
+      lastName: "",
       email: "",
       phone: "",
       editMode: false,
@@ -17,18 +18,28 @@ class GIMain extends React.Component {
   }
 
   render() {
-    const name = this.state.name;
+    const firstName = this.state.firstName;
+    const lastName = this.state.lastName;
     const email = this.state.email;
     const phone = this.state.phone;
     const editMode = this.state.editMode;
 
     if (editMode) {
-      return <GIEdit context={this} name={name} email={email} phone={phone} />;
+      return (
+        <GIEdit
+          context={this}
+          firstName={firstName}
+          lastName={lastName}
+          email={email}
+          phone={phone}
+        />
+      );
     } else {
       return (
         <GIDisplay
           context={this}
-          name={name}
+          firstName={firstName}
+          lastName={lastName}
           email={email}
           phone={phone}
           handleEditMode={handleEditModeFun}

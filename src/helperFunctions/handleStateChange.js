@@ -1,8 +1,11 @@
 export default function handleStateChange(context, inputType, value) {
   switch (inputType) {
     // general information
-    case "name":
-      context.setState({ name: value });
+    case "firstName":
+      context.setState({ firstName: value });
+      break;
+    case "lastName":
+      context.setState({ lastName: value });
       break;
     case "email":
       context.setState({ email: value });
