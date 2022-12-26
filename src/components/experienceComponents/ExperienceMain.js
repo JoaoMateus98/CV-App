@@ -1,6 +1,7 @@
 import React from "react";
 import handleEditModeFun from "../../helperFunctions/handleEditMode";
 import ExperienceEdit from "./ExperienceEdit";
+import ExperienceItem from "./ExperienceItem";
 import AddButton from "../helperComponents/AddButton";
 import "../styles/experience.css";
 
@@ -56,6 +57,9 @@ class ExperienceMain extends React.Component {
     } else {
       return (
         <div className="experience-main-container">
+          {this.state.jobList.map(() => {
+            return <ExperienceItem />;
+          })}
           <AddButton contextMain={this} handleEditMode={handleEditModeFun} />
         </div>
       );
