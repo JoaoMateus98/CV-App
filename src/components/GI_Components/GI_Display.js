@@ -4,10 +4,13 @@ import EditButton from "../helperComponents/EditButton";
 
 class GIDisplay extends React.Component {
   render() {
-    const { context, name, email, phone, handleEditMode } = this.props;
+    const { context, firstName, lastName, email, phone, handleEditMode } =
+      this.props;
     return (
       <div className="GI_main-container">
-        <GIDisplayItem category={"Name"} value={name} />
+        <GIDisplayItem category={"FirstName"} value={firstName} />
+        <GIDisplayItem category={"LastName"} value={lastName} />
+        <p id="GI-contact">CONTACTS</p>
         <GIDisplayItem category={"Email"} value={email} />
         <GIDisplayItem category={"Phone"} value={phone} />
         <EditButton context={context} handleEditMode={handleEditMode} />

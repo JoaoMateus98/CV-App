@@ -73,6 +73,7 @@ class ExperienceMain extends React.Component {
     } else {
       return (
         <div className="experience-main-container">
+          <p id="experience-title">WORK EXPERIENCE</p>
           {this.state.jobList.map((job) => {
             return <ExperienceItem context={this} key={job.key} jobObj={job} />;
           })}
