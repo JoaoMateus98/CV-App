@@ -1,12 +1,24 @@
 import React from "react";
 
 class ExperienceItem extends React.Component {
-  constructor(props) {}
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      company: props.jobObj.company,
+      position: props.jobObj.position,
+      description: props.jobObj.description,
+      period: {
+        start: props.jobObj.period.start,
+        end: props.jobObj.period.end,
+      },
+    };
+  }
 
   render() {
     const jobObj = this.props.jobObj;
 
-    console.log(jobObj);
+    console.log(this.state);
     return (
       <div className="job-container">
         <div className="job-company">

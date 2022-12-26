@@ -20,6 +20,7 @@ class InputItem extends React.Component {
           onChange={(event) =>
             handleStateChange(context, inputType, event.target.value)
           }
+          required
         />
       </div>
     );

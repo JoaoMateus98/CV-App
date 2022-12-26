@@ -3,6 +3,7 @@ import handleEditModeFun from "../../helperFunctions/handleEditMode";
 import ExperienceEdit from "./ExperienceEdit";
 import ExperienceItem from "./ExperienceItem";
 import AddButton from "../helperComponents/AddButton";
+import uniqid from "uniqid";
 import "../styles/experience.css";
 
 class ExperienceMain extends React.Component {
@@ -10,12 +11,12 @@ class ExperienceMain extends React.Component {
     super(props);
 
     this.state = {
-      company: "N/A",
-      position: "N/A",
-      description: "N/A",
+      company: "",
+      position: "",
+      description: "",
       period: {
-        start: "N/A",
-        end: "N/A",
+        start: "",
+        end: "",
       },
       jobList: [],
       editMode: false,
@@ -24,6 +25,7 @@ class ExperienceMain extends React.Component {
 
   createNewJob = () => {
     const job = {
+      key: uniqid(),
       company: this.state.company,
       position: this.state.position,
       description: this.state.description,
@@ -57,10 +59,10 @@ class ExperienceMain extends React.Component {
     } else {
       return (
         <div className="experience-main-container">
-          {this.state.jobList.map(() => {
-            return <ExperienceItem />;
+          {this.state.jobList.map((job) => {
+            return <ExperienceItem key={job.key} jobObj={job} />;
           })}
-          <AddButton contextMain={this} handleEditMode={handleEditModeFun} />
+          <AddButton context={this} handleEditMode={handleEditModeFun} />
         </div>
       );
     }
