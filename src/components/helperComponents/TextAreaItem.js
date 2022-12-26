@@ -17,12 +17,11 @@ class TextAreaItem extends React.Component {
           rows={rows}
           cols={cols}
           placeholder={`Enter ${inputTypeCapitalized} Here`}
+          value={savedValueState}
           onChange={(event) =>
             handleStateChange(context, inputType, event.target.value)
           }
-        >
-          {savedValueState}
-        </textarea>
+        />
       </div>
     );
   }

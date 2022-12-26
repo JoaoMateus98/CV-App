@@ -2,6 +2,7 @@ import React from "react";
 import SubmitButton from "../helperComponents/SubmitButton";
 import InputItem from "../helperComponents/InputItem";
 import TextAreaItem from "../helperComponents/TextAreaItem";
+import PeriodItem from "../helperComponents/PeriodItem";
 import handleEditModeFun from "../../helperFunctions/handleEditMode";
 
 class ExperienceEdit extends React.Component {
@@ -26,6 +27,7 @@ class ExperienceEdit extends React.Component {
           cols="20"
           context={context}
         />
+        <PeriodItem inputType="period" context={context} />
         <SubmitButton />
       </form>
     );
