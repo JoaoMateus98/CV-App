@@ -10,7 +10,7 @@ class GIDisplay extends React.Component {
       <div className="GI_main-container">
         <GIDisplayItem category={"FirstName"} value={firstName} />
         <GIDisplayItem category={"LastName"} value={lastName} />
-        <p id="GI-contact">CONTACTS</p>
+        <p id="GI-contact">CONTACT</p>
         <GIDisplayItem category={"Email"} value={email} />
         <GIDisplayItem category={"Phone"} value={phone} />
         <EditButton context={context} handleEditMode={handleEditMode} />
