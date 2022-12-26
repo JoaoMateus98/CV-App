@@ -1,24 +1,24 @@
 import React from "react";
 
 class ExperienceItem extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      company: props.jobObj.company,
-      position: props.jobObj.position,
-      description: props.jobObj.description,
+  handleEdit = (context, jobObj) => {
+    context.setState({
+      company: jobObj.company,
+      position: jobObj.position,
+      description: jobObj.description,
       period: {
-        start: props.jobObj.period.start,
-        end: props.jobObj.period.end,
+        start: jobObj.period.start,
+        end: jobObj.period.end,
       },
-    };
-  }
+      editMode: true,
+      mode: "edit",
+      jobToEdit: jobObj,
+    });
+  };
 
   render() {
+    const context = this.props.context;
     const jobObj = this.props.jobObj;
-
-    console.log(this.state);
     return (
       <div className="job-container">
         <div className="job-company">
@@ -42,6 +42,13 @@ class ExperienceItem extends React.Component {
             <p>End Date:</p>
             <p>{jobObj.period.end}</p>
           </div>
+          <button
+            onClick={() => {
+              this.handleEdit(context, jobObj);
+            }}
+          >
+            Edit
+          </button>
         </div>
       </div>
     );

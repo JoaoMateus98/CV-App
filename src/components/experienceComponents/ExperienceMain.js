@@ -20,6 +20,8 @@ class ExperienceMain extends React.Component {
       },
       jobList: [],
       editMode: false,
+      mode: "add",
+      jobToEdit: "",
     };
   }
 
@@ -44,8 +46,18 @@ class ExperienceMain extends React.Component {
     this.setState({
       jobList: this.state.jobList.concat(job),
     });
+  };
 
-    console.log(this.state.jobList);
+  editJob = () => {
+    Object.assign(this.state.jobToEdit, {
+      company: this.state.company,
+      position: this.state.position,
+      description: this.state.description,
+      period: {
+        start: this.state.period.start,
+        end: this.state.period.end,
+      },
+    });
   };
 
   render() {
@@ -54,13 +66,15 @@ class ExperienceMain extends React.Component {
         <ExperienceEdit
           context={this}
           createNewExperienceItem={this.createNewExperienceItemFun}
+          mode={this.state.mode}
+          editJob={this.editJob}
         />
       );
     } else {
       return (
         <div className="experience-main-container">
           {this.state.jobList.map((job) => {
-            return <ExperienceItem key={job.key} jobObj={job} />;
+            return <ExperienceItem context={this} key={job.key} jobObj={job} />;
           })}
           <AddButton context={this} handleEditMode={handleEditModeFun} />
         </div>
