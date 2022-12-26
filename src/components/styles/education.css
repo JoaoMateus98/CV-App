@@ -1,4 +1,4 @@
-#education-main-container {
+.education-main-container {
   flex: 3;
   padding: 12px 0 0 12px;
   border: var(--test-border);

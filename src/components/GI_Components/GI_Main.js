@@ -9,9 +9,9 @@ class GIMain extends React.Component {
     super(props);
 
     this.state = {
-      name: "N/A",
-      email: "N/A",
-      phone: "N/A",
+      name: "",
+      email: "",
+      phone: "",
       editMode: false,
     };
   }

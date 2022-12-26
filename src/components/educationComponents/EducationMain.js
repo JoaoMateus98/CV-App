@@ -3,7 +3,9 @@ import "../styles/education.css";
 
 class EducationMain extends React.Component {
   render() {
-    return <div id="education-main-container">Education Placeholder</div>;
+    return (
+      <div className="education-main-container">Education Placeholder</div>
+    );
   }
 }
 

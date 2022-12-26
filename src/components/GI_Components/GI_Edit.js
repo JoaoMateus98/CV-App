@@ -1,6 +1,6 @@
 import React from "react";
 import SubmitButton from "../helperComponents/SubmitButton";
-import GIInputItem from "./GI_HelperComponents/GI_InputItem";
+import InputItem from "../helperComponents/InputItem";
 import handleEditModeFun from "../../helperFunctions/handleEditMode";
 
 class GIEdit extends React.Component {
@@ -9,12 +9,12 @@ class GIEdit extends React.Component {
 
     return (
       <form
-        className="GI_Display-main-container"
+        className="GI_main-container"
         onSubmit={() => handleEditModeFun(context, false)}
       >
-        <GIInputItem inputType="name" type="text" context={context} />
-        <GIInputItem inputType="email" type="email" context={context} />
-        <GIInputItem inputType="phone" type="tel" context={context} />
+        <InputItem inputType="name" type="text" context={context} />
+        <InputItem inputType="email" type="email" context={context} />
+        <InputItem inputType="phone" type="tel" context={context} />
         <SubmitButton />
       </form>
     );

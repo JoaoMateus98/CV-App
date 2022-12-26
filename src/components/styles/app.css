@@ -25,18 +25,23 @@
   flex-direction: column;
   border: var(--test-border);
 }
-.edit-button {
-  align-self: flex-end;
-  padding: 4px 12px;
-  width: fit-content;
-  margin-right: 6px;
-  background-color: var(--nice-blue);
-  border: 0;
-  border-radius: 8px;
-  text-transform: uppercase;
-  color: white;
+.input-container {
+  display: flex;
+  justify-content: space-between;
 }
-.submit-button {
+.input-container > * {
+  margin-right: 6px;
+}
+.input-container > input {
+  background-color: var(--nice-green);
+  border: 2px solid var(--nice-blue);
+  border-radius: 8px;
+}
+
+.edit-button,
+.submit-button,
+.add-button,
+.delete-button {
   align-self: flex-end;
   padding: 4px 12px;
   width: fit-content;
@@ -46,4 +51,10 @@
   border-radius: 8px;
   text-transform: uppercase;
   color: white;
+  cursor: pointer;
+}
+
+.delete-button {
+  background-color: red;
+  margin-right: 0;
 }
