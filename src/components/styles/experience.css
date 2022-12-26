@@ -11,3 +11,14 @@
 .experience-main-container > button {
   margin-top: auto;
 }
+
+.job-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.job-field {
+  display: flex;
+  justify-content: space-between;
+}
