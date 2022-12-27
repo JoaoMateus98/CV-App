@@ -11,6 +11,7 @@ class ExperienceMain extends React.Component {
     super(props);
 
     this.state = {
+      callingFrom: "experience",
       company: "",
       position: "",
       description: "",

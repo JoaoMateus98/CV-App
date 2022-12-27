@@ -25,6 +25,7 @@ class ExperienceItem extends React.Component {
   render() {
     const context = this.props.context;
     const jobObj = this.props.jobObj;
+
     return (
       <div className="job-container">
         <div className="period">

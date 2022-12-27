@@ -13,6 +13,7 @@ class PeriodItem extends React.Component {
             type="date"
             name="start"
             value={context.state.period.start}
+            required
             onChange={(event) => {
               context.setState({
                 period: {
@@ -30,6 +31,7 @@ class PeriodItem extends React.Component {
             type="date"
             name="end"
             value={context.state.period.end}
+            required
             onChange={(event) => {
               context.setState({
                 period: {
