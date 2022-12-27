@@ -2,7 +2,10 @@ import React from "react";
 
 class EducationItem extends React.Component {
   render() {
-    return <div></div>;
+    const context = this.props.context;
+    const schoolObj = this.props.schoolObj;
+
+    return <div className="school-container"></div>;
   }
 }
 
