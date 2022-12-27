@@ -11,6 +11,7 @@ class EducationMain extends React.Component {
     super(props);
 
     this.state = {
+      callingFrom: "education",
       school: "",
       major: "",
       period: {
