@@ -2,6 +2,7 @@ import React from "react";
 import SubmitButton from "../helperComponents/SubmitButton";
 import InputItem from "../helperComponents/InputItem";
 import handleEditModeFun from "../../helperFunctions/handleEditMode";
+import CancelEditButton from "../helperComponents/CancelEditButton";
 
 class GIEdit extends React.Component {
   render() {
@@ -16,7 +17,10 @@ class GIEdit extends React.Component {
         <InputItem inputType="lastName" type="text" context={context} />
         <InputItem inputType="email" type="email" context={context} />
         <InputItem inputType="phone" type="tel" context={context} />
-        <SubmitButton />
+        <div className="form-buttons">
+          <SubmitButton />
+          <CancelEditButton context={context} />
+        </div>
       </form>
     );
   }

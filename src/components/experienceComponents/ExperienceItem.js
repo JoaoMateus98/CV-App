@@ -27,16 +27,16 @@ class ExperienceItem extends React.Component {
     const jobObj = this.props.jobObj;
 
     return (
-      <div className="job-container">
-        <div className="period">
+      <div className="right-item-container">
+        <div className="right-period">
           <p>
             {jobObj.period.start} - {jobObj.period.end}
           </p>
         </div>
-        <h1 className="position">{jobObj.position}</h1>
+        <h1 className="right-item-bold">{jobObj.position}</h1>
         <p>{jobObj.company}</p>
-        <p className="description">{jobObj.description}</p>
-        <div className="job-buttons">
+        <p className="right-item-small">{jobObj.description}</p>
+        <div className="right-item-buttons">
           <button
             className="edit-button job-field"
             onClick={() => {

@@ -1,5 +1,16 @@
 .education-main-container {
   flex: 3;
   padding: 12px 0 0 12px;
-  border: var(--test-border);
+  padding: 12px 32px 12px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.education-main-container > input,
+.education-main-container > button {
+  margin-top: 24px;
+}
+
+.school-buttons {
 }

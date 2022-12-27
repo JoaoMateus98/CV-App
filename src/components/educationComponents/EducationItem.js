@@ -28,15 +28,15 @@ class EducationItem extends React.Component {
     const schoolObj = this.props.schoolObj;
 
     return (
-      <div className="school-container">
-        <div className="period">
+      <div className="right-item-container">
+        <div className="right-period">
           <p>
             {schoolObj.period.start} - {schoolObj.period.end}
           </p>
         </div>
-        <h1 className="major">{schoolObj.major}</h1>
-        <p className="school">{schoolObj.school}</p>
-        <div className="school-buttons">
+        <h1 className="right-item-bold">{schoolObj.major}</h1>
+        <p className="right-item-small">{schoolObj.school}</p>
+        <div className="right-item-buttons">
           <button
             className="edit-button job-field"
             onClick={() => {
