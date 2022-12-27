@@ -35,7 +35,7 @@ class ExperienceEdit extends React.Component {
           )
         }
       >
-        <p id="experience-title">WORK EXPERIENCE</p>
+        <p className="right-title">WORK EXPERIENCE</p>
         <InputItem inputType="company" type="text" context={context} />
         <InputItem inputType="position" type="text" context={context} />
         <TextAreaItem

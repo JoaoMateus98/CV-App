@@ -14,14 +14,15 @@
 #left-app-container {
   background-color: rgb(206, 206, 206);
   flex: 1;
-  border: var(--test-border);
+  flex-grow: 0;
+  padding-right: 4%;
 }
 #right-app-container {
   background-color: rgb(255, 255, 255);
-  flex: 5;
+  flex: 4;
   display: flex;
   flex-direction: column;
-  border: var(--test-border);
+  max-width: 80rem;
 }
 .input-container {
   display: flex;
@@ -38,7 +39,8 @@
 .edit-button,
 .submit-button,
 .add-button,
-.delete-button {
+.delete-button,
+.cancel-button {
   align-self: flex-end;
   padding: 4px 12px;
   width: fit-content;
@@ -50,7 +52,8 @@
   cursor: pointer;
 }
 
-.delete-button {
+.delete-button,
+.cancel-button {
   background-color: red;
-  margin-right: 0;
+  margin-right: 6px;
 }

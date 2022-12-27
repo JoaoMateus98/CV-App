@@ -71,7 +71,9 @@ class EducationMain extends React.Component {
     } else {
       return (
         <div className="education-main-container">
-          <p id="education-title">EDUCATION</p>
+          <p id="education-title" className="right-title">
+            EDUCATION
+          </p>
           {this.state.schoolList.map((school) => {
             return (
               <EducationItem

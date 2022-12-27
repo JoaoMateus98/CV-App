@@ -11,37 +11,44 @@
   margin-top: auto;
 }
 
-#experience-title {
+.right-title {
   font-size: 1.65rem;
   font-weight: bolder;
   margin: 0;
   border-bottom: 2px solid black;
 }
 
-.job-container {
-  width: 50%;
+.right-item-container {
+  max-width: 20rem;
   display: flex;
   flex-direction: column;
 }
 
-.job-buttons {
+.right-item-buttons {
   display: flex;
   gap: 12px;
   justify-content: flex-end;
 }
 
-.period {
+.right-period {
+  margin-top: 12px;
   font-size: 1.1rem;
   font-weight: 400;
 }
 
-.position {
+.right-item-bold {
   margin: 0;
   font-size: 1.5rem;
   font-weight: 900;
 }
 
-.description {
+.right-item-small {
   margin-top: 12px;
   margin-bottom: 24px;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
 }

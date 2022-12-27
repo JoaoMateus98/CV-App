@@ -34,7 +34,7 @@ class EducationEdit extends React.Component {
           )
         }
       >
-        <p id="education-title">EDUCATION</p>
+        <p className="right-title">EDUCATION</p>
         <InputItem inputType="school" type="text" context={context} />
         <InputItem inputType="major" type="text" context={context} />
         <PeriodItem inputType="period" context={context} />
