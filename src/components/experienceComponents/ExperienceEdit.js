@@ -4,6 +4,7 @@ import InputItem from "../helperComponents/InputItem";
 import TextAreaItem from "../helperComponents/TextAreaItem";
 import PeriodItem from "../helperComponents/PeriodItem";
 import handleEditModeFun from "../../helperFunctions/handleEditMode";
+import CancelEditButton from "../helperComponents/CancelEditButton";
 
 class ExperienceEdit extends React.Component {
   handleSubmit = (event, context, createNewExperienceItem, mode, editJob) => {
@@ -34,6 +35,7 @@ class ExperienceEdit extends React.Component {
           )
         }
       >
+        <p id="experience-title">WORK EXPERIENCE</p>
         <InputItem inputType="company" type="text" context={context} />
         <InputItem inputType="position" type="text" context={context} />
         <TextAreaItem
@@ -43,7 +45,10 @@ class ExperienceEdit extends React.Component {
           context={context}
         />
         <PeriodItem inputType="period" context={context} />
-        <SubmitButton />
+        <div className="form-buttons">
+          <SubmitButton />
+          <CancelEditButton context={context} />
+        </div>
       </form>
     );
   }

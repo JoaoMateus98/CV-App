@@ -3,6 +3,7 @@ import handleEditModeFun from "../../helperFunctions/handleEditMode";
 import InputItem from "../helperComponents/InputItem";
 import PeriodItem from "../helperComponents/PeriodItem";
 import SubmitButton from "../helperComponents/SubmitButton";
+import CancelEditButton from "../helperComponents/CancelEditButton";
 
 class EducationEdit extends React.Component {
   handleSubmit = (event, context, createNewEducationItem, mode, editSchool) => {
@@ -33,10 +34,14 @@ class EducationEdit extends React.Component {
           )
         }
       >
+        <p id="education-title">EDUCATION</p>
         <InputItem inputType="school" type="text" context={context} />
         <InputItem inputType="major" type="text" context={context} />
         <PeriodItem inputType="period" context={context} />
-        <SubmitButton />
+        <div className="form-buttons">
+          <SubmitButton />
+          <CancelEditButton context={context} />
+        </div>
       </form>
     );
   }

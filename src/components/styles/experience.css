@@ -1,7 +1,6 @@
 .experience-main-container {
   flex: 1;
   padding: 12px 32px 12px 32px;
-  border: var(--test-border);
   display: flex;
   flex-direction: column;
   gap: 16px;
