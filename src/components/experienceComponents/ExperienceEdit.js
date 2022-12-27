@@ -6,14 +6,15 @@ import PeriodItem from "../helperComponents/PeriodItem";
 import handleEditModeFun from "../../helperFunctions/handleEditMode";
 
 class ExperienceEdit extends React.Component {
-  handleSubmit = (context, createNewExperienceItem, mode, editJob) => {
+  handleSubmit = (event, context, createNewExperienceItem, mode, editJob) => {
+    event.preventDefault();
+
     if (mode === "add") {
       createNewExperienceItem();
     } else {
       editJob();
     }
 
-    console.log();
     handleEditModeFun(context, false);
   };
 
@@ -23,8 +24,14 @@ class ExperienceEdit extends React.Component {
     return (
       <form
         className="experience-main-container"
-        onSubmit={() =>
-          this.handleSubmit(context, createNewExperienceItem, mode, editJob)
+        onSubmit={(event) =>
+          this.handleSubmit(
+            event,
+            context,
+            createNewExperienceItem,
+            mode,
+            editJob
+          )
         }
       >
         <InputItem inputType="company" type="text" context={context} />

@@ -23,6 +23,13 @@ export default function handleStateChange(context, inputType, value) {
     case "description":
       context.setState({ description: value });
       break;
+    // education
+    case "school":
+      context.setState({ school: value });
+      break;
+    case "major":
+      context.setState({ major: value });
+      break;
     default:
       console.log("Invalid input type!!!");
       break;

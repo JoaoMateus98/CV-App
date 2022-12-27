@@ -5,16 +5,28 @@ class AddButton extends React.Component {
   handleClick = (context, handleEditMode) => {
     handleEditMode(context, true);
 
-    context.setState({
-      company: "",
-      position: "",
-      description: "",
-      period: {
-        start: "",
-        end: "",
-      },
-      mode: "add",
-    });
+    if (context.state.callingFrom === "education") {
+      context.setState({
+        school: "",
+        major: "",
+        period: {
+          start: "",
+          end: "",
+        },
+        mode: "add",
+      });
+    } else if (context.state.callingFrom === "experience") {
+      context.setState({
+        company: "",
+        position: "",
+        description: "",
+        period: {
+          start: "",
+          end: "",
+        },
+        mode: "add",
+      });
+    }
   };
 
   render() {
